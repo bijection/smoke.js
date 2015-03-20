@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title>Wow Demo</title>
+	<style type="text/css">
+		canvas: {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		body {
+			margin: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<canvas id="canvas"></canvas>
+	<script type="text/javascript" src="smoke.js"></script>
+	<script type="text/javascript">
+		var canvas = document.getElementById('canvas')
+		var ctx = canvas.getContext('2d')
+		canvas.width = 1000
+		canvas.height = 1000
+
+		var party = smokemachine(ctx, [54, 16.8, 18.2])
+		party.start()
+		party.addsmoke(500,500,10)
+		setTimeout(function(){
+			party.stop()
+			party.addsmoke(600,500,100)
+			party.addsmoke(500,600,20)
+			for(var i=0;i<10;i++){
+				party.step(10) //pretend 10 ms pass each time
+			}
+			setTimeout(function(){
+				party.start()
+			},1000)
+		},1000)
+
+	</script>
+</body>
+
+</html>
