@@ -43,7 +43,7 @@ smoke.js
 ## API
 
 
-### smokemachine(context, [r,g,b]])
+### smokemachine(context, [r,g,b])
 Returns a smoke machine that makes smoke.
 
 * context — the context of the canvas we wanna draw smoke on
