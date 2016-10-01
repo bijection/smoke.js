@@ -1,14 +1,44 @@
 <!DOCTYPE HTML>
 
-<title>smoke.js demo</title>
+<title>smoke.js | A Small But Good JavaScript Smoke Effect</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<style type="text/css">
+	html, body {
+		position: absolute;
+		margin: 0;
+		width: 100%;
+	}
+	#hi{
+		position: absolute;
+		top: 40%;
+		width: 100%;
+		text-align: center;
+	}
+	#hi a {
+		color: #fff;
+		font-size: 80px;
+		text-decoration: none;		
+		font-family: Lobster;
+	}
+</style>
 
+
+<a href="https://github.com/bijection/smoke.js">
+	<img style="width: 150px; position: absolute; top: 0; right: 0; border: 0;" src="./github.png" alt="Spoon me on GitHub" >
+</a>
 <canvas id="canvas"></canvas>
+<div id='hi'>
+	<a href="https://github.com/bijection/smoke.js">
+		smoke.js
+	</a>
+</div>
 <script src="smoke.js"></script>
 <script>
 	var canvas = document.getElementById('canvas')
 	var ctx = canvas.getContext('2d')
-	canvas.width = 1000
-	canvas.height = 1000
+	canvas.width = innerWidth
+	canvas.height = innerHeight
 
 	var party = smokemachine(ctx, [54, 16.8, 18.2])
 	party.start() // start animating
@@ -16,9 +46,13 @@
 	onmousemove = function (e) {
 		var x = e.clientX
 		var y = e.clientY
-		var n = 1//Math.floor(Math.random() * 5) + 5
+		var n = .5
 		var t = Math.floor(Math.random() * 200) + 3800
 		party.addsmoke(x, y, n, t)
 	}
+
+	setInterval(function(){
+		party.addsmoke(innerWidth/2, innerHeight, 1)
+	}, 100)
 
 </script>
