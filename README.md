@@ -15,7 +15,7 @@ party.start()
 
 ## you'll probably copy paste this
 ```html
-    <canvas id="canvas"></canvas>
+<canvas id="canvas"></canvas>
 <script src="smoke.js"></script>
 <script>
 	var canvas = document.getElementById('canvas')
