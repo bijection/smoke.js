@@ -1,18 +1,21 @@
 smoke.js
 ========
 ## tl;dr
+```javascript
 	var ctx = canvas.getContext('2d')
 
 	var party = smokemachine(ctx)
 	party.addsmoke(500,500)
 	party.start()
+```
 
-## an example
+## DEMO
 
-https://rawgit.com/bijection/smoke.js/master/demo.html
+### [You can play with a live demo here.](http://omrelli.ug/smoke.js/)
 
 ## you'll probably copy paste this
-	<canvas id="canvas"></canvas>
+```html
+    <canvas id="canvas"></canvas>
 	<script src="smoke.js"></script>
 	<script>
 		var canvas = document.getElementById('canvas')
@@ -43,7 +46,7 @@ https://rawgit.com/bijection/smoke.js/master/demo.html
 
 		},1000)
 	</script>
-
+```
 ## API
 
 
@@ -53,7 +56,7 @@ Returns a smoke machine that makes smoke.
 * context — the context of the canvas we wanna draw smoke on
 * [r,g,b] — (optional) the color we want the smoke to be
 
-```
+```javascript
 var party = smokemachine(context, [1,5,253])
 ```
 
