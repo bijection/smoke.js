@@ -13,7 +13,7 @@ party.start()
 
 ### [You can play with a live demo here.](http://omrelli.ug/smoke.js/)
 
-## you'll probably copy paste this
+## you can copy paste this
 ```html
 <canvas id="canvas"></canvas>
 <script src="smoke.js"></script>
