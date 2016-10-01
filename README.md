@@ -2,11 +2,11 @@ smoke.js
 ========
 ## tl;dr
 ```javascript
-	var ctx = canvas.getContext('2d')
+var ctx = canvas.getContext('2d')
 
-	var party = smokemachine(ctx)
-	party.addsmoke(500,500)
-	party.start()
+var party = smokemachine(ctx)
+party.addsmoke(500,500)
+party.start()
 ```
 
 ## DEMO
@@ -16,36 +16,36 @@ smoke.js
 ## you'll probably copy paste this
 ```html
     <canvas id="canvas"></canvas>
-	<script src="smoke.js"></script>
-	<script>
-		var canvas = document.getElementById('canvas')
-		var ctx = canvas.getContext('2d')
-		canvas.width = 1000
-		canvas.height = 1000
+<script src="smoke.js"></script>
+<script>
+	var canvas = document.getElementById('canvas')
+	var ctx = canvas.getContext('2d')
+	canvas.width = 1000
+	canvas.height = 1000
 
-		var party = smokemachine(ctx, [54, 16.8, 18.2])
+	var party = smokemachine(ctx, [54, 16.8, 18.2])
 
-		party.start() // start animating
+	party.start() // start animating
 
-		party.addsmoke(500,500,10) // wow we made smoke
+	party.addsmoke(500,500,10) // wow we made smoke
+
+	setTimeout(function(){
+
+		party.stop() // stop animating
+
+		party.addsmoke(600,500,100)
+		party.addsmoke(500,600,20)
+
+		for(var i=0;i<10;i++){
+			party.step(10) // pretend 10 ms pass and rerender
+		}
 
 		setTimeout(function(){
-
-			party.stop() // stop animating
-
-			party.addsmoke(600,500,100)
-			party.addsmoke(500,600,20)
-
-			for(var i=0;i<10;i++){
-				party.step(10) // pretend 10 ms pass and rerender
-			}
-
-			setTimeout(function(){
-				party.start()
-			},1000)
-
+			party.start()
 		},1000)
-	</script>
+
+	},1000)
+</script>
 ```
 ## API
 
