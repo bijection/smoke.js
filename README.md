@@ -4,8 +4,12 @@ smoke.js
 	var ctx = canvas.getContext('2d')
 
 	var party = smokemachine(ctx)
-	party.addsmoke(500,500) 
+	party.addsmoke(500,500)
 	party.start()
+
+## an example
+
+https://rawgit.com/bijection/smoke.js/master/demo.html
 
 ## you'll probably copy paste this
 	<canvas id="canvas"></canvas>
@@ -26,7 +30,7 @@ smoke.js
 
 			party.stop() // stop animating
 
-			party.addsmoke(600,500,100) 
+			party.addsmoke(600,500,100)
 			party.addsmoke(500,600,20)
 
 			for(var i=0;i<10;i++){
@@ -69,4 +73,3 @@ Stop animating :(
 
 ### party.step(milliseconds)
 redaws the smoke as if `milliseconds` milliseconds have passed
-
