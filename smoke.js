@@ -66,6 +66,7 @@ var smokemachine = function (context, color){
 	function addparticles(x,y,n,lifetime){
 		lifetime = lifetime || 4000
 		n = n || 10
+        if(n < 1) return Math.random() <= n && pendingparticles.push(new particle(x,y,lifetime));
 		for (var i = 0; i < n; i++) {
 			pendingparticles.push(new particle(x,y,lifetime))
 		};
