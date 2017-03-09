@@ -1,5 +1,5 @@
-smoke.js
-========
+<span style='text-align: center; font-family: lobster'><h1>smoke.js</h1></span>
+
 ## tl;dr
 ```javascript
 var ctx = canvas.getContext('2d')
