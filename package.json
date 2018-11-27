@@ -1,0 +1,25 @@
+{
+  "name": "@bijection/smoke",
+  "version": "1.0.0",
+  "description": "Tiny, fancy, javascript canvas smoke effect.",
+  "main": "smoke.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bijection/smoke.js.git"
+  },
+  "keywords": [
+    "smoke",
+    "effect",
+    "canvas",
+    "smoke.js"
+  ],
+  "author": "bijection",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bijection/smoke.js/issues"
+  },
+  "homepage": "https://github.com/bijection/smoke.js#readme"
+}
