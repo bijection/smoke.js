@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+
+<title>smoke.js | A Small But Good JavaScript Smoke Effect</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<style type="text/css">
+	html, body {
+		position: absolute;
+		margin: 0;
+		width: 100%;
+		overflow: hidden;
+		height: 100%;
+	}
+	#hi{
+		position: absolute;
+		top: 40%;
+		width: 100%;
+		text-align: center;
+	}
+	#hi a {
+		color: #fff;
+		font-size: 80px;
+		text-decoration: none;		
+		font-family: Lobster;
+	}
+	
+	.noselect {
+		-webkit-touch-callout: none; /* iOS Safari */
+    	-webkit-user-select: none; /* Safari */
+     	-khtml-user-select: none; /* Konqueror HTML */
+       	-moz-user-select: none; /* Firefox */
+		-ms-user-select: none; /* Internet Explorer/Edge */
+		user-select: none; /* Non-prefixed version, currently
+					  supported by Chrome and Opera */
+	}
+
+	#gh {
+		display: block;
+	    position: absolute;
+	    transform: rotate(45deg);
+	    top: -30px;
+	    right: -100px;
+	    transform-origin: top left;
+	    background: #38dea8;
+	    padding: 10px 40px;
+	    color: #fff;
+	    font-size: 18px;
+	    font-family: sans-serif;
+	    text-decoration: none;
+	    text-shadow: -1px -1px 0 #5aab00;
+	    box-shadow: 0 2px 10px #0000003d;
+	}
+
+	.twitter-follow-button {
+		position: absolute !important;
+		bottom: 10px;
+		right: 10px;
+	}
+
+</style>
+
+
+<a id="gh" href="https://github.com/bijection/smoke.js">
+	Fork Me on <b>Github</b>
+</a>
+<canvas id="canvas"></canvas>
+<div id='hi'>
+	<a href="https://github.com/bijection/smoke.js" class='noselect'>
+		smoke.js
+	</a>
+</div>
+
+<a href="https://twitter.com/biject?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @biject</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<script src="smoke.js"></script>
+<script>
+	var canvas = document.getElementById('canvas')
+	var ctx = canvas.getContext('2d')
+	canvas.width = innerWidth
+	canvas.height = innerHeight
+
+	var party = smokemachine(ctx, [18, 16, 54])
+	party.start() // start animating
+	party.setPreDrawCallback(function(dt){
+		party.addSmoke(innerWidth/2, innerHeight, .5)
+		canvas.width = innerWidth
+		canvas.height = innerHeight
+	})
+
+	// party.addsmoke(innerWidth/2, innerHeight, 100)
+	// onclick=e => {
+	// 	console.log(e)
+	// 	party.step()
+	// }
+
+	onmousemove = function (e) {
+		var x = e.clientX
+		var y = e.clientY
+		var n = .5
+		var t = Math.floor(Math.random() * 200) + 3800
+		party.addsmoke(x, y, n, t)
+	}
+
+</script>
