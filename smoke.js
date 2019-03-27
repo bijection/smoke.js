@@ -22,7 +22,8 @@ function floatInRange(start, end){
     return start + Math.random()*(end - start)
 }
 
-function makeSmokeSprite(color=[24, 46.8, 48.2]){
+function makeSmokeSprite(color){
+    color = color || [24, 46.8, 48.2]
     var smokeSprite = document.createElement('canvas'),
         ctx = smokeSprite.getContext('2d'),
         data = ctx.createImageData(smokeSpriteSize, smokeSpriteSize),
