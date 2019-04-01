@@ -39,7 +39,7 @@ var SmokeMachine = require('@bijection/smoke')
 var ctx = canvas.getContext('2d')
 
 var party = SmokeMachine(ctx)
-party.addsmoke(500,500)
+party.addSmoke(500,500)
 party.start()
 ```
 
@@ -57,14 +57,14 @@ party.start()
 
 	party.start() // start animating
 
-	party.addsmoke(500,500,10) // wow we made smoke
+	party.addSmoke(500,500,10) // wow we made smoke
 
 	setTimeout(function(){
 
 		party.stop() // stop animating
 
-		party.addsmoke(600,500,100)
-		party.addsmoke(500,600,20)
+		party.addSmoke(600,500,100)
+		party.addSmoke(500,600,20)
 
 		for(var i=0;i<10;i++){
 			party.step(10) // pretend 10 ms pass and rerender
@@ -99,7 +99,7 @@ Start Animating!!
 
 Stop animating :(
 
-### party.addsmoke(x,y,numberofparticles)
+### party.addSmoke(x,y,numberofparticles)
 
 * x,y — the coords at which the smoke should be created in the canvas
 * numberofparticles — more makes more smoke
