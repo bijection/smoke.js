@@ -1,6 +1,6 @@
 {
   "name": "@bijection/smoke",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tiny, fancy, javascript canvas smoke effect.",
   "main": "smoke.js",
   "scripts": {
