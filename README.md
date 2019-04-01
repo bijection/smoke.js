@@ -1,19 +1,49 @@
-<span style='text-align: center; font-family: lobster'><h1>smoke.js</h1></span>
+<p align="center">
+  <a href="http://omrelli.ug/smoke.js"/>
+    <img src="https://user-images.githubusercontent.com/8824442/55344169-90d5c380-5461-11e9-8acd-0b222e55f55d.png" width='270'/>
+  </a>
+</p>
 
-## tl;dr
+## Demo
+### [You can play with a live demo here →](http://omrelli.ug/smoke.js/)
+
+
+## Installation
+### Basic
+Copy the smoke.js file into your project and use it with a script tag:
+```html
+<script src="smoke.js"></script>
+```
+That defines a `SmokeMachine` global that you can use to make smoke (see examples below).
+
+### Package Manager
+You can also use yarn or npm:
+```
+yarn add @bijection/smoke
+```
+```
+npm add @bijection/smoke
+```
+
+Thern you can import or require smoke.js like this:
+```javascript
+import SmokeMachine from '@bijection/smoke'
+```
+```javascript
+var SmokeMachine = require('@bijection/smoke')
+```
+
+## Usage
+### Short Example
 ```javascript
 var ctx = canvas.getContext('2d')
 
-var party = smokemachine(ctx)
+var party = SmokeMachine(ctx)
 party.addsmoke(500,500)
 party.start()
 ```
 
-## DEMO
-
-### [You can play with a live demo here.](http://omrelli.ug/smoke.js/)
-
-## you can copy paste this
+### Copy-Pastable Example
 ```html
 <canvas id="canvas"></canvas>
 <script src="smoke.js"></script>
@@ -23,7 +53,7 @@ party.start()
 	canvas.width = 1000
 	canvas.height = 1000
 
-	var party = smokemachine(ctx, [54, 16.8, 18.2])
+	var party = SmokeMachine(ctx, [54, 16.8, 18.2])
 
 	party.start() // start animating
 
@@ -47,17 +77,17 @@ party.start()
 	},1000)
 </script>
 ```
+
 ## API
 
-
-### smokemachine(context, [r,g,b])
+### SmokeMachine(context, [r,g,b])
 Returns a smoke machine that makes smoke.
 
 * context — the context of the canvas we wanna draw smoke on
 * [r,g,b] — (optional) the color we want the smoke to be
 
 ```javascript
-var party = smokemachine(context, [1,5,253])
+var party = SmokeMachine(context, [1,5,253])
 ```
 
 ### party.start()
