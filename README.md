@@ -25,7 +25,7 @@ yarn add @bijection/smoke
 npm add @bijection/smoke
 ```
 
-Thern you can import or require smoke.js like this:
+Then you can import or require smoke.js like this:
 ```javascript
 import SmokeMachine from '@bijection/smoke'
 ```
@@ -105,4 +105,4 @@ Stop animating :(
 * numberofparticles — more makes more smoke
 
 ### party.step(milliseconds)
-redaws the smoke as if `milliseconds` milliseconds have passed
+redraws the smoke as if `milliseconds` milliseconds have passed
