@@ -1,6 +1,6 @@
 <p align="center">
   <a href="http://omrelli.ug/smoke.js"/>
-    <img src="https://user-images.githubusercontent.com/8824442/87230857-5696e980-c367-11ea-8619-3dc33414fbef.png" width='270'/>
+    <img src="https://user-images.githubusercontent.com/8824442/87230857-5696e980-c367-11ea-8619-3dc33414fbef.png" width="600"/>
   </a>
 </p>
 
