@@ -1,6 +1,6 @@
 <p align="center">
   <a href="http://omrelli.ug/smoke.js"/>
-    <img src="https://user-images.githubusercontent.com/8824442/55344169-90d5c380-5461-11e9-8acd-0b222e55f55d.png" width='270'/>
+    <img src="https://user-images.githubusercontent.com/8824442/87230857-5696e980-c367-11ea-8619-3dc33414fbef.png" width='270'/>
   </a>
 </p>
 
@@ -16,7 +16,7 @@ Copy the smoke.js file into your project and use it with a script tag:
 ```
 That defines a `SmokeMachine` global that you can use to make smoke (see examples below).
 
-### Package Manager
+### `yarn` or `npm`
 You can also use yarn or npm:
 ```
 yarn add @bijection/smoke
